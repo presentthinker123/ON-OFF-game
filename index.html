@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat & Bulb</title>
+    <style>
+        body{
+            background-color: black;
+            color:white;
+
+        }
+        .cat{
+            width:200px;
+            height:200px;
+        }
+        .bulb{
+            width:200px;
+            height:200px;
+        }
+        img{
+            margin-left: 45%;
+            display:block;
+        }
+        p{
+            size: 30px;
+            margin-left:50%;
+        }
+        button{
+            display:inline;
+        }
+        #one{
+            margin-left:50%;
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png" id="bulbimg" alt="Cat image" class="bulb">
+    <img src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png" id="catimg" alt="Bulb image"n class="cat">
+
+    <p id="switch">Switch ON/OFF</p>
+    <button id="one">ON</button>
+    <button id="two">OFF</button>
+
+
+    <script>
+        let bulbimgs = document.getElementById("bulbimg");
+        let catimgs=document.getElementById("catimg");
+        
+        let swit = document.getElementById("switch")
+        let on = document.getElementById("one");
+        let off = document.getElementById("two");
+        on.addEventListener("click",function(){
+            catimgs.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png";
+            bulbimgs.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png";
+            swit.textContent="Switched ON";
+
+        })
+        off.addEventListener("click",function(){
+            catimgs.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-eyes-img.png";
+            bulbimgs.src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-off-img.png";
+            
+            swit.textContent="Switched OFF";
+        })
+    </script>
+</body>
+</html>
